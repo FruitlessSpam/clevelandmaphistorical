@@ -1,4 +1,4 @@
-import html2canvas from 'html2canvas';
+import * as html2canvas from 'html2canvas';
 import {jsPDF} from 'jspdf';
 import Map from 'ol/Map.js';
 import View from 'ol/View.js';
