@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Print to scale example</title>
+    <link rel="stylesheet" href="node_modules/ol/ol.css">
+    <style>
+      .map {
+        width: 100%;
+        height: 400px;
+      }
+      .wrapper {
+        max-width: 566px;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        margin-bottom: 10px;
+      }
+      #export-pdf {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="map" class="map"></div>
+    </div>
+    <form class="form">
+      <label for="format">Page size </label>
+      <select id="format">
+        <option value="a0">A0 (slow)</option>
+        <option value="a1">A1</option>
+        <option value="a2">A2</option>
+        <option value="a3">A3</option>
+        <option value="a4" selected>A4</option>
+        <option value="a5">A5 (fast)</option>
+      </select>
+      <label for="resolution">Resolution </label>
+      <select id="resolution">
+        <option value="72">72 dpi (fast)</option>
+        <option value="150">150 dpi</option>
+        <option value="200" selected>200 dpi</option>
+        <option value="300">300 dpi (slow)</option>
+      </select>
+      <label for="scale">Scale </label>
+      <select id="scale">
+        <option value="500">1:500000</option>
+        <option value="250" selected>1:250000</option>
+        <option value="100">1:100000</option>
+        <option value="50">1:50000</option>
+        <option value="25">1:25000</option>
+        <option value="10">1:10000</option>
+      </select>
+    </form>
+    <button id="export-pdf">Export PDF</button>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
